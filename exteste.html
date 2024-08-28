@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilada.css">
+</head>
+<body>
+    <header>
+        <h1>
+            testando javascript 
+        </h1>
+    </header>
+    <main>
+        <form action="">
+            <label for="iinput">Dados:</label>
+            <input type="text" id="iinput" required autocomplete="off" placeholder="digite algo">
+            <input type="button" value="TESTAR" id="btn" onclick="clic()">
+        </form>
+    </main>
+    <div id="resultados">
+        <img id="imagem" src="img/nome.png" alt="">
+    </div>
+    <script>
+        function clic(){
+            let img=document.getElementById("imagem")
+            let source=img.getAttribute("src")
+            img.setAttribute("src","img/jumps.webp")
+            var audio = new Audio('audio/fnaf-jumpscare-sound.mp3');
+            audio.addEventListener('canplaythrough', function() {
+            audio.play();
+            });
+            let input=document.getElementById('iinput').value;
+            let res=document.getElementById('resultados')
+        }
+    </script>
+</body>
+</html>
